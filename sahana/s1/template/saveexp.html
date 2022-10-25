@@ -1,0 +1,28 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'CSS/input.css' %}">
+    </head>
+    <body>
+        <h1>Add New Experience</h1>
+<div>
+<form action="{% url 'saveexp' %}"  method="POST">
+{% csrf_token %}
+<label for="company">Comapny</label>
+<input type="text" id="company" name="company" placeholder="Your company name..">
+
+<label for="role">Role</label>
+<input type="text" id="role" name="role" placeholder="Your role in..">
+
+<label for="nyear">Year Of Experience</label>
+<input type="text" id="nyear" name="nyear" placeholder=" number of Year worked..">
+
+
+<label for="description">Description"</label>
+<input type="text" id="description"" name="description"" placeholder="small description">
+<input type="submit" value="Submit">
+</form>
+</div>
+    </body>
+</html>
+

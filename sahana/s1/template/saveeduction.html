@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'CSS/input.css' %}">
+    </head>
+    <body>
+        <h1>Add New Degree</h1>
+<div>
+<form action="{% url 'saveeduction' %}"  method="POST">
+{% csrf_token %}
+<label for="degree">Degree</label>
+<input type="text" id="degree" name="degree" placeholder="Your degree name..">
+
+<label for="specialization">Specialization</label>
+<input type="text" id="specialization" name="specialization" placeholder="Your specialization in..">
+
+
+<label for="university">University </label>
+<input type="text" id="university " name="university" placeholder="Your university name..">
+
+
+<label for="school">School</label>
+<input type="text" id="school" name="school" placeholder="Your school name..">
+
+
+<label for="yop">Year Of Passing</label>
+<input type="text" id="yop" name="yop" placeholder="Year of passing..">
+
+
+<label for="per">Percentage</label>
+<input type="text" id="per" name="per" placeholder="enter Your percentage.">
+<input type="submit" value="Submit">
+</form>
+</div>
+    </body>
+</html>
+

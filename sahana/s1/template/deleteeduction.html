@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+    <head>
+      <link rel="stylesheet" href="{% static 'CSS/table.css' %}">
+    </head>
+        <body>
+            <h1>MY Eduction</h1>
+
+            <table id="data">
+              <thead>
+                <tr>
+                    <th>Update</th>
+                    <th>ID</th>
+                    <th>Degree</th>
+                    <th>Specialization</th>
+                    <th>University</th>
+                    <th>School</th>
+                    <th>Year of Passing</th>
+                    <th>Percentage</th> 
+                    <th>Delete</th> 
+                    
+                </tr>
+            </thead>
+            {% for x in mymembers %}
+              <tr>
+            <td><a href="updateeduction/{{ x.id }}">{{ x.id }}</a></td>
+              <td>{{ x.id }}</td>
+              <td>{{ x.degree}}</td>
+              <td>{{ x.specialization}}</td>
+              <td>{{ x.university }}</td>
+              <td>{{ x.school }}</td>
+              <td>{{ x.yop}}</td>
+              <td>{{ x.per }}</td>
+              <td><a href="deleteeduction/{{ x.id }}">delete</a></td>
+              </tr>
+            {% endfor %}
+            </table>
+            <p>
+              <a href="saveeduction/">Add new Degree</a>
+            </p>
+                <p>
+                  <a href="main/"> GO TO Main Page</a>
+                </p>
+        </body>
+    
+</html>
+

@@ -1,0 +1,115 @@
+{% load static %}
+<html>
+    <head>
+        <script src="{% static 'JS/resume.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'CSS/resume.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+        <body>
+            
+                <button class="tablink" onclick="openPage('about', this, 'red')" id="defaultOpen">About</button>
+                <button class="tablink" onclick="openPage('eduction', this, 'green')" >Eduction</button>
+                <button class="tablink" onclick="openPage('skill', this, 'blue')">Skill</button>
+                <button class="tablink" onclick="openPage('experience', this, 'purple')">Experience</button>
+                <button class="tablink" onclick="openPage('project', this, 'pink')">Projects</button>
+                <button class="tablink" onclick="openPage('intrest', this, 'yellow')">Intrests</button>
+                <button class="tablink" onclick="openPage('feedback', this, 'green')">feedback</button>
+
+                <div><img src="{% static 'images/profile1.jpeg' %}"  class="center"></div>
+            <div class="center1" id="about" class="tabcontent">{% for x in mymembers %}
+                <div>
+                    {{x.fname}}.{{x.lname}}
+                </div>
+                <div>
+                    {{x.role}}
+                </div>
+                <div>
+                    {{x.title}}
+                </div>
+                {% endfor %}
+                <button><a href="www.gmail.com">Contact Me</a></button>
+            </div>
+            <div clas="icon">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>   
+            </div>
+            <p>Made with <i class="fa fa-heart-o"></i>By Sahana M</p>
+        </section>
+            <section id="eduction" class="tabcontent">
+                <div>
+                    <h1>My Eduction</h1>
+                    {% for x in mymembers1 %}
+
+                    <details>
+                        <summary onmouseover="myfuna(this)" onmouseout="myfuna1(this)">Completed {{x.degree}} in {{x.specialization}} on {{x.yop}} &emsp;</summary>
+                       <ul>
+                        <p><li>{{x.school}} of {{x.university}}</li></p> 
+                          <p><li> Secured with {{x.per}} Percentage/CGPA</li></p>
+                            </ul>
+                    </details>
+                        {% endfor %}
+                </div>
+            </section>
+
+            <section id="skill" class="tabcontent">
+                <h1>My Skills</h1>
+                {% for x in mymembers2 %}
+                <div>
+                    <details>
+                        <summary onmouseover="myfuna(this)" onmouseout="myfuna1(this)">{{x.skill}}&emsp;</summary>
+                       <ul>
+                        <p><li>{{x.description}}</li></p> 
+                            </ul>
+                    </details>
+                </div>
+                {% endfor %}
+
+            </section>
+            <section id="experience" class="tabcontent">
+                <h1>My Experence</h1>
+                <div>  
+                    {% for x in mymembers3 %}
+                        <details>
+                            <summary onmouseover="myfuna(this)" onmouseout="myfuna1(this)">{{x.company}} &emsp;</summary>
+                           <ul>
+                            <p><li>{{x.nyear}} of Experience as {{x.role}}</li></p> 
+                              <p><li> {{x.company}} was {{x.description}}</li></p>
+                                </ul>
+                        </details>
+                        {% endfor %}
+                </div>
+            </section>
+            <section id="project" class="tabcontent">
+                <h1>My Projects</h1>
+                {% for x in mymembers4 %}
+                <details>
+                    <summary onmouseover="myfuna(this)" onmouseout="myfuna1(this)">{{x.project}} &emsp;</summary>
+                   <ul>
+                    <p><li>Summary: {{x.description}}</li></p> 
+                      
+                        </ul>
+                </details>
+                {% endfor %}
+            </section>
+            <section id="intrest" class="tabcontent">
+                <h1>My INTRESTs</h1>
+                {% for x in mymembers5 %}
+                <div>
+                   {{x.hobies}} :<a href="{{x.links}}">{{x.links}}</a>
+                  <br><br>
+                </div>
+                {% endfor %}
+            </section>
+            <section id="feedback" class="tabcontent">
+                
+                <p id="fee">Feedback</p>
+                <textarea id="feedback" name="feedback" rows="4" cols="50">
+                </textarea> 
+                <input type="submit" value="submit">
+            
+            </section>
+        </body>
+    
+</html>

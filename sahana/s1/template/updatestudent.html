@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'CSS/input.css' %}">
+    </head>
+    <body>
+        <h1>Update MyIntroduction</h1>
+<div>
+    <form action="updaterecordstudent/{{ mymember.id }}" method="POST">
+{% csrf_token %}
+<label for="phone">Phone</label>
+<input type="text" id="phone" name="phone" value="{{ mymember.phone }}">
+
+<label for="email">Email</label>
+<input type="text" id="email" name="email" value="{{ mymember.email }}">
+
+<label for="title">Title</label>
+<input type="text" id="title" name="title"value="{{ mymember.title }}">
+
+<label for="role">Role</label>
+<input type="text" id="role" name="role" value="{{ mymember.role }}">
+
+<label for="fname">First Name</label>
+<input type="text" id="fname" name="fname" value="{{ mymember.fname }}">
+
+<label for="lname">Last Name</label>
+<input type="text" id="lname" name="lname" value="{{ mymember.lname }}">
+<input type="submit" value="Submit">
+</form>
+</div>
+    </body>
+</html>

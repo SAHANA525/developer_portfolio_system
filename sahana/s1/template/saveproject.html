@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'CSS/input.css' %}">
+    </head>
+    <body>
+        <h1>Add New Project</h1>
+<div>
+<form action="{% url 'saveproject' %}"  method="POST">
+{% csrf_token %}
+<label for="skill">Project Name</label>
+<input type="text" id="project" name="project" placeholder="Your project name..">
+
+<label for="descripton">Project Description</label>
+<input type="text" id="description" name="description" placeholder="Small description..">
+<input type="submit" value="Submit">
+</form>
+</div>
+    </body>
+</html>
+

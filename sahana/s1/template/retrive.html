@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <div>
+               {% csrf_token %}
+        <table>
+            <thead>
+            <tr>
+                <th>Skill</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+           {% for data in ra %}
+            <tr>
+                <td>{{data.skill}}</td>
+                 <td>{{data.description}}</td>
+                 
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        </div>
+    </body>
+</html>

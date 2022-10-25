@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+    <head>
+      <link rel="stylesheet" href="{% static 'CSS/table.css' %}">
+    </head>
+        <body>
+            <h1>MY INTRESTs</h1>
+
+            <table id="data">
+              <thead>
+                <tr>
+                    <th>Update</th>
+                    <th>ID</th>
+                    <th>Hobbies</th>
+                    <th>External Links</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            {% for x in mymembers %}
+              <tr>
+            <td><a href="updateintr/{{ x.id }}">{{ x.id }}</a></td>
+              <td>{{ x.id }}</td>
+              <td>{{ x.hobies }}</td>
+              <td>{{ x.links}}</td>
+              <td><a href="deleteintr/{{ x.id }}">delete</a></td>
+              </tr>
+            {% endfor %}
+            </table>
+            
+            <p>
+            <a href="saveintr/">Add new data</a>
+            </p>
+            <p>
+                <a href="main/"> GO TO Main Page</a>
+            </p>
+        </body>
+    
+</html>
+

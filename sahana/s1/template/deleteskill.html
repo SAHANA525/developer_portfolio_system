@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+    <head>
+      <link rel="stylesheet" href="{% static 'CSS/table.css' %}">
+    </head>
+        <body>
+            <h1>MY SKILLS</h1>
+
+            <table id="data">
+              <thead>
+                <tr>
+                    <th>Update</th>
+                    <th>ID</th>
+                    <th>Skill</th>
+                    <th>Description</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            {% for x in mymembers %}
+              <tr>
+            <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+              <td>{{ x.id }}</td>
+              <td>{{ x.skill }}</td>
+              <td>{{ x.description }}</td>
+              <td><a href="deleteskill/{{ x.id }}">delete</a></td>
+              </tr>
+            {% endfor %}
+            </table>
+            
+            <p>
+            <a href="saveskill/">Add new SKill</a>
+            </p>
+            <p>
+              <a href="main/"> GO TO Main Page</a>
+            </p>
+        </body>
+    
+</html>
+

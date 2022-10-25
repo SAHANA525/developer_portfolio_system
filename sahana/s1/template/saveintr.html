@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'CSS/input.css' %}">
+    </head>
+    <body>
+        <h1>Add New Record</h1>
+<div>
+<form action="{% url 'saveintr' %}"  method="POST">
+{% csrf_token %}
+<label for="hobies">Hobbies/Intrest</label>
+<input type="text" id="hobies" name="hobies" placeholder="Your hobie..">
+
+<label for="links">External Links</label>
+<input type="text" id="links" name="links" placeholder="certificaton link or other..">
+<input type="submit" value="Submit">
+</form>
+</div>
+    </body>
+</html>
+

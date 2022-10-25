@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'CSS/input.css' %}">
+    </head>
+    <body>
+        <h1>Update Eduction</h1>
+<div>
+    <form action="updaterecordeduction/{{ mymember.id }}" method="POST">
+{% csrf_token %}
+<label for="degree">Degree</label>
+<input type="text" id="degree" name="degree" value="{{ mymember.degree }}">
+
+<label for="specialization">Specialization</label>
+<input type="text" id="specialization" name="specialization" value="{{ mymember.specialization}}">
+
+<label for="university">University</label>
+<input type="text" id="university" name="university"value="{{ mymember.university }}">
+
+<label for="school">School</label>
+<input type="text" id="school" name="school" value="{{ mymember.school}}">
+
+<label for="yop">Year Of Passing</label>
+<input type="text" id="yop" name="yop" value="{{ mymember.yop }}">
+
+<label for="per">Percentage</label>
+<input type="text" id="per" name="per" value="{{ mymember.per }}">
+<input type="submit" value="Submit">
+</form>
+</div>
+    </body>
+</html>

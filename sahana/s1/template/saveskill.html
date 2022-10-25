@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'CSS/input.css' %}">
+    </head>
+    <body>
+        <h1>Add New Skill</h1>
+<div>
+<form action="{% url 'saveskill' %}"  method="POST">
+{% csrf_token %}
+<label for="skill">Skill Name</label>
+<input type="text" id="skill" name="skill" placeholder="Your Skill..">
+
+<label for="descripton">Skill Description</label>
+<input type="text" id="description" name="description" placeholder="Small description..">
+<input type="submit" value="Submit">
+</form>
+</div>
+    </body>
+</html>
+

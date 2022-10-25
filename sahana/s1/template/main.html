@@ -1,0 +1,79 @@
+{% load static %}
+<html>
+    <style>
+        *{
+            background-color: crimson;
+        }
+        .btn-group button {
+          background-color:coral; 
+          border: 1px solid green; 
+          color: white; 
+          padding: 59px 80px; 
+          cursor: pointer; 
+          float: center;
+        }
+        
+        .btn-group:after {
+          content: "";
+          clear: both;
+          color: pink;
+          display: table;
+         
+        }
+        
+        .btn-group button:not(:last-child) {
+          border-right: none; /* Prevent double borders */
+        }
+        
+        /* Add a background color on hover */
+        .btn-group button:hover {
+          background-color: #3e8e41;
+        }
+        h1{
+            color:blue;
+            font-weight: bold;
+            font-size: ;
+            text-align: center;
+        }
+        a{
+          
+            background-color: white;
+        }
+        img{
+            border-radius: 50%;
+            width: 200px;
+            border: 1px solid white;
+            float: right;
+            
+        }
+        </style>
+    <head>
+       
+    </head>
+    <body>
+        <h1> Have A GOOD DAY (:--:)SAHANA </h1>
+       
+        <img src="{% static 'images/profile1.jpeg' %}">
+        <form class="btn-group">
+            <div>
+           <button> <a href="/indexstudent" class="btn btn-success">MY Intro</a></button>
+            
+          <button>  <a href="/indexeduction" class="btn btn-success">My Eduction</a></button>
+        </div>
+            <div>
+                <button><a href="/index"   class="btn btn-success">My SKILL SET</a></button>
+            
+                    <button><a href="/indexproject" class="btn btn-success">My Projects</a></button>
+        </div>
+        <div>
+            <button><a href="/indexintr" class="btn btn-success">MY INTREST</a></button>
+            <button><a href="/indexexp" class="btn btn-success">Experience</a></button>
+
+            <button><a href="/resume" class="btn btn-success">Profile</a></button>
+        </div>
+        </form>
+
+    </body>
+</html>
+
+
