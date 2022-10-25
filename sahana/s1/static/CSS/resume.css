@@ -1,0 +1,124 @@
+*{
+    background-color: blue;
+    color:aqua;
+
+}
+
+img{
+    border-radius: 50%;
+    width: 180px;
+    border: 1px solid white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.center {
+    display: block;
+    
+  }
+  .center1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-left: 42%;
+  }
+  h1{
+    color: cornsilk;
+  }
+  li{
+    color:brown;
+    font-weight: bold;
+  }
+  button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  button:hover {
+    background-color: pink; /* Add a dark-grey background on hover */
+  }
+  a{
+    color:white;
+  }
+  summary{
+    font-size: larger;
+    font-weight: bold;
+    font-size:x-large;
+    color: solid black;
+   
+    
+}
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 14%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+
+}
+
+#about {
+  background-color:blue;
+  color: green;
+  font-weight: bold;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+#eduction {background-color: green;}
+#skill {background-color: chartreuse;}
+#project {background-color: red;}
+#experience {background-color: purple;}
+#feedback {background-color: pink;}
+#intrest {background-color: orange;}
+
+.icon .fa{
+	color: red;
+	margin: 2px 22px;
+	cursor: pointer;
+	padding: 18px 0;
+  float: right;
+
+}
+.fa-heart-o{
+	color: green;
+}
+#fee{
+  font-weight: bold;
+  color:Red;
+  background-color: #4CAF50;
+  text-align: center;
+  padding-left: 40%;
+  padding-right: 40%;
+
+}
+textarea{
+  color: black;
+  font-weight: bold;
+  align-self: center;
+}
+
